@@ -1,16 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-.inter-tight-font{
-  font-family: "Inter Tight", sans-serif;
-  font-optical-sizing: auto;
-  /* font-weight: <weight>; */
-  font-style: normal;
+.inter-tight-font{ 
+   font-family: "Inter Tight", sans-serif; 
+   font-optical-sizing: auto; 
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* shared style */
+
+.color-btn{
+    width: 200px;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    border-radius: 42px;
+    padding: 16px 40px;
+    background: rgb(230, 83, 60);
+}
+.color-btn:hover{
+    background-color:rgba(190, 60, 230, 0.582);
+}
+.normal-btn{
+    width: 200px;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    border-radius: 42px;
+    padding: 16px 40px;
+    background: black;
+}
+.normal-btn:hover{
+    background-color: rgba(137, 43, 226, 0.63);
+}
+.hidden{
+    display: none;
 }
 /* header area style */
 header{
@@ -19,18 +51,20 @@ header{
     justify-content: space-between;
     background-color: rgb(17, 17, 17);
 }
-header h1{
+.logo-text{
     color: rgb(230, 83, 60);
     font-weight: 800;
-    font-size: 2.4rem;
+    font-size: 4rem;
 }
-nav{
-
+.icon i{
+    color: white;
+    font-size: 3rem;
+    display: none;
 }
 nav ul{
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 24px;
 }
 nav ul li{
     list-style: none;
@@ -42,7 +76,7 @@ ul li a{
     color: white;
     text-transform: capitalize;
 }
-ul li a:hover{
+nav>ul li a:hover{
     background-color: rgb(230, 83, 60);
     border: none;
     border-radius: 25px;
@@ -50,3 +84,774 @@ ul li a:hover{
 }
 /* banner area style */
 
+.banner-area{
+    max-width: 88rem;
+    display: flex;
+    /* justify-content: space-between; */
+    /* background-color: antiquewhite; */
+    background: linear-gradient(0.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0.808)100%);
+}
+.banner-text{
+    max-width: 43.5rem;
+    height: 27.5rem;
+    color: white;
+    padding: 5.3rem 5.3rem 4.7rem 10rem;
+    
+}
+.banner-text h1{
+    font-size: 377%;
+    margin-bottom: 1.5rem;
+}
+.banner-text p{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.banner-img{
+    position: relative;
+}
+.banner-img img{
+    max-width: 28rem;
+    height: 32rem;
+    margin-left: 6rem;
+    margin-top: 1rem;
+}
+.review{
+    width: 180px;
+    height: 90px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    /* background-color: aquamarine; */
+    background: rgba(255, 255, 255, 0.1);
+}
+.review h1{
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-left: 23px;
+}
+.review p{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    margin-left: 23px;
+}
+.review-1{
+    top: 7.4rem;
+    right: -4.8rem;
+    position: absolute;
+}
+.review-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 1rem;
+    top: 24rem;
+}
+.review-2 .ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(230, 83, 60);
+}
+.review-text{
+    margin-top: -26px;
+}
+.review-text h1{
+    /* margin-top: 0px; */
+    margin-left: 10px;
+}
+.review-text p{
+    margin-left: 10px;
+}
+/* nav and banner area mobile responsive */
+
+@media screen and (max-width: 576px) {
+    header{
+        padding: 1rem;
+    }
+    nav{
+        display: none;
+    }
+    .icon i{
+        display: block;
+    }
+    .banner-area{
+        flex-direction: column;
+    }
+    .banner-text{
+        /* max-width: 0rem; */
+        padding: 0 0 0 1rem;
+    }
+    .banner-text h1{
+        font-size: 3rem;
+        margin-bottom: 0.4rem;
+    }
+    .banner-text p{
+        margin-bottom: 1rem;
+    }
+    .banner-img img{
+        margin: 0;
+        width: 100%;
+        /* display: no; */
+    }
+    .banner-btn{
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        
+    }
+    
+    .review{
+        width: 150px;
+        height: 82px;
+        top: 2.5rem;
+        right: 0.3rem;
+    }
+    .review-2{
+        top: 15.5rem;
+        right: -2.3rem;
+    }
+    .review h1{
+        margin-left: 12px;
+    }
+    .review p{
+        margin-left: 12px;
+    }
+}
+
+/* nav and banner area tablet responsive */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+   
+    header{
+        padding: 2rem 1rem;
+    }
+    ul{
+        margin-top: 30px;
+    }
+    nav ul li{
+        margin-left: 3rem;
+    }
+    .banner-area{
+        flex-direction: column;
+    }
+    .banner-text {
+        width: 100%;
+        height: auto;
+        padding: 3rem 5rem;
+    }
+    .banner-text h1{
+        font-size: 5rem;
+    }
+    .banner-img{
+        padding-left: 13rem;
+    }
+    .banner-img img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    .review-1{
+        top: 7.4rem;
+        right: 7.2rem;
+    }
+    .review-2{
+        left: 12rem;
+        top: 28rem;
+    }
+}
+
+/* habits area style */
+
+.habit-container{
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: black;
+}
+.habit-container>h1{
+    font-size: 3rem;
+}
+.habit-container>p{
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.507);
+    margin-top: 1.4rem;
+}
+.habit-card{
+    display: flex;
+    padding: 5rem 6rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5rem;
+
+}
+.card-item img{
+    width: 100%;
+    /* height: 50%; */
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+.card-item h1{
+    font-size: 1.8rem;
+    margin-top: 3rem;
+
+}
+.card-item p{
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.507);
+}
+
+/* habit area responsive style */
+
+@media screen and (max-width: 576px) {
+    
+    .habit-container>p{
+        font-size: 1rem;
+    }
+    .habit-card{
+        flex-direction: column;
+        padding: 3rem;
+    }
+    .card-item{
+        margin-left: 0;
+        margin-bottom: 1.3rem;
+
+    }
+}
+
+/* habit area responsive for tablet */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .habit-container p{
+        padding: 1rem;
+        margin: 0;
+    }
+    .habit-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 1rem 2rem;
+    }
+    .card-item{
+        margin: 0;
+        padding: 2rem;
+    }
+    .card-item>p{
+        padding: 0;
+        margin-top: 1rem;
+    }
+}
+/* run area style */
+
+.run-container{
+    padding: 2.5rem 0;
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+.run-area{
+    width: 68rem;
+    height: 26rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+    padding: 2rem 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+}
+.run-text{
+    width: 35rem;
+    padding-right: 3rem;
+}
+.run-title{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.run-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.run-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-image: url('../images/run.jpg'); */
+    /* background-position:  center; */
+    /* background-size: initial; */
+    /* position: relative; */
+}
+ .run-img img{
+    width: 25rem;
+    /* position: absolute; */
+    top: 2.5rem;
+    border-radius: 8px;
+    padding-left: 0rem;
+} 
+
+/* run area media quary responsive */
+ 
+@media screen and (max-width: 576px){
+     .run-area{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding: 0;
+        
+    }
+    .run-text{
+        width: 100%;
+        margin: 1.5rem 0.5rem;
+        padding: 0.5rem 3rem;
+    }
+    .run-text h1{
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .run-text p{
+        font-size: 1rem;
+    }
+    .run-img{
+        height: auto;
+        align-items: center;
+    }
+    .run-img img{
+        width: 90%;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+/* run area responsive for tablet */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .run-container{
+        padding: 2rem;
+    }
+    .run-area{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+    .run-text{
+        width: 100%;
+        padding: 0;
+    }
+    .run-text h1{
+        font-size: 2.5rem;
+    
+    }
+    .run-text p{
+        font-size: 1rem;
+    }
+    .run-img{
+        width: 90%;
+        height: 90%;
+    }
+    .run-img img{
+        width: 100%;
+        height: 100%;
+        padding-top: 2rem;
+    }
+}
+
+/* training area style */
+
+.training-container{
+    padding: 3rem 1rem;
+    color: white;
+    background-color: black;
+}
+.training-text{
+    width: 68rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+.training-text h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.training-text p{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.541);
+}
+.training-img-area{
+    width: 68rem;
+    display: grid;
+    /* grid-template-areas:  */
+    /* '1 1 2 3'
+    '4 5 5 6'
+    ; */
+    grid-template-columns: repeat(3,1fr);
+    margin: 0px auto;
+    overflow: hidden;
+}
+.training-img img{
+    width: 100%;
+    height: 100%;
+}
+
+/* training area responesive */
+
+@media screen and (max-width: 576px) {
+    .training-text{
+        width: 100%;
+    }
+    .training-img-area{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .training-img:nth-child(5),
+    .training-img:nth-child(6){
+        display: none;
+    }
+}
+
+/* training area responsive for tablet */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .training-container{
+        width: 100%;
+    }
+    .training-text{
+        width: 100%;
+    }
+    .training-text p{
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .training-img-area{
+        width: 100%;
+    }
+}
+
+/* bmi calculator area style */
+ 
+.bmi-heading{
+    color: white;
+    padding: 3rem 8rem 3rem 22rem ;
+    background-color: black;
+}
+.bmi-heading h1{
+    font-size: 3rem;
+}
+.bmi-heading p{
+    font-size: 1.5rem;
+    margin-top: 1.4rem;
+    color: rgba(255, 255, 255, 0.562);
+}
+.calculator-area{
+    width: 100%;
+    height: auto;
+    padding: 2rem 10rem;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    background-color:  rgb(17, 17, 17);
+}
+ .calculator{
+    width: 50%;
+    /* padding: 1.5rem 0; */
+ }
+ .calculator h1{
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+ }
+ .calculator table{
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+ }
+ .calculator table th{
+    color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+ }
+ .calculator table td{
+    color: rgba(255, 255, 255, 0.404);
+    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+ }
+ .input-area{
+    width: 50%;
+    padding-bottom: 2.5rem;
+ }
+ input::placeholder{
+    color: rgba(255, 255, 255, 0.719);
+ }
+ .input-area h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+ }
+ .input-area p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.404);
+ }
+ .input-area input{
+    width: 45%;
+    height: 15%;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.404);
+    display: inline-block;
+ }
+ .input-area .last-input{
+    display: block;
+    width: 93%;
+    margin-bottom: 2rem;
+ }
+
+ /* calculator area responsive style */
+
+@media screen and (max-width: 576px) {
+    .bmi-heading{
+        padding: 1rem;
+    }
+    .bmi-heading h1{
+        font-size: 2.5rem;
+        margin-bottom: 1.3rem;
+    }
+    .bmi-heading p{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.555);
+    }
+    .calculator-area{
+        padding: 1rem;
+        flex-direction: column;
+    }
+    .calculator{
+        width: 100%;
+    }
+    .calculator h1{
+        font-size: 1.3rem;
+    }
+    .input-area{
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: 1.5rem;
+    }
+    .input-area h1{
+        font-size: 1.3rem;
+    }
+    .input-area p{
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    /* .input-area .last-input{
+        width: 95%;
+    } */
+}
+
+/* bmi and calculator area responsive for tablet */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .bmi-heading{
+        padding: 2rem;
+    }
+    .calculator-area{
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .calculator{
+        margin-bottom: 2rem;
+    }
+    .input-area{
+        width: 100%;
+    }
+    .input-area .last-input{
+        width: 92%;
+    }
+}
+
+ /* Team area style */
+  
+ .team-container{
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: black;
+ }
+.team-container h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.team-container p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.team-card{
+    width: 68rem;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-radius: 8px;
+    background-color:  rgba(255, 255, 255, 0.404);
+    /* position: relative; */
+}
+.card-child img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.card-1,.card-2,.card-3,
+.card-4,.card-5,.card-6{
+    position: relative;
+}
+.card-child h4{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.card-child p{
+    font-size: 18px;
+    margin-bottom: -15px;
+    color: rgba(255, 255, 255, 0.637);
+}
+.card-title,.card-description{
+    text-align: left;
+    position: absolute;
+    bottom: 2.3rem;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+/* team area responsive style */
+
+@media screen and (max-width: 576px) {
+    .team-container{
+        padding: 1rem;
+    }
+    .team-container h1{
+        font-size: 2rem;
+    }
+    .team-container p{
+        font-size: 1.2rem;
+    }
+    .team-card{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* team area responsive for tablet */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .team-card{
+        width: 100%;
+    }
+}
+
+/* footer area style */
+
+footer{
+    background-color:  rgb(17, 17, 17);
+    
+}
+
+.footer-box{
+    padding: 3rem 5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background-color:  rgb(17, 17, 17);
+    color: white;
+}
+.box-1{
+    padding-right: 4rem;
+}
+.logo{
+    font-size: 5rem;
+}
+.footer-description{
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+
+}
+.footer-box ul{
+    list-style: none;
+    margin-top: 2rem;
+}
+.footer-box ul li{
+    margin-top: .8rem;
+}
+.footer-box ul li a{
+    text-decoration: none;
+}
+.box h1{
+    font-size: 3rem;
+}
+.box ul li a{
+    color: rgba(255, 255, 255, 0.589);
+}
+hr{
+    width: 70%;
+    margin: 0 auto;
+    color:rgba(255, 255, 255, 0.219);
+}
+.reserved-text{
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.589);
+    padding: 3rem 0;
+}
+
+/* footer area responsive style */
+
+@media screen and (max-width: 576px) {
+    .footer-box{
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .footer-description{
+        font-size: 1rem;
+    }
+    .box-1{
+        margin-bottom: 2rem;
+    }
+    .box{
+        margin-bottom: 1.5rem;
+    }
+    .reserved-text{
+        font-size: 1rem;
+    }
+
+}
+
+/* footer area responsive for tablet */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .footer-box{
+        grid-template-columns: 1fr;
+    }
+}
+
+.hidden{
+    display: none;
+}
